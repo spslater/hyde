@@ -3,7 +3,7 @@
 {{ range .Data.Pages -}}
 <article class="list-item">
 <header>
-  <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>{{ if .Params.subtitle }} <h4>{{ .Params.subtitle }}</h4>{{ end }}
+  <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>{{ if .Params.subtitle }}<h4>{{ .Params.subtitle }}</h4>{{ end }}
 </header>
 <main>
   {{ .Summary }}
