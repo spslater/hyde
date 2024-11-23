@@ -1,0 +1,153 @@
+/* https://colorkit.co/color/6a9fb5/ */
+
+body {
+    background-color: #f0f5f8;
+    color: #314d59;
+}
+
+.content hr {
+    border-color: #314d59;
+}
+
+.tile-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.tile {
+    background-color: #e1ebf0;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 15px;
+    box-shadow: #d2e2e9 3px 3px 10px;
+
+    a:link {
+        color: #314d59;
+        font-style: italic;
+    }
+
+    .tag {
+        background-color: #f0f5f8;
+        border-radius: 10px;
+        padding: 5px;
+        font-size: 0.75rem;
+    }
+
+    main {
+        padding-left: 5px;
+
+        h2 {
+            color: #314d59;
+            margin-top: 1rem;
+            margin-bottom: 0.25rem;
+        }
+        h3 {
+            color: #314d59;
+            margin-top: 0.25rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    footer time {
+        color: #4d7586;
+        font-size: 0.9rem;
+        padding-left: 5px;
+    }
+}
+
+.blk-img {
+    display: block;
+    float: left;
+    margin: 20px;
+    text-align: center;
+
+    img {
+        border-radius: 150px;
+    }
+}
+
+.list-page {
+    display: flex;
+    flex-direction: column;
+
+    .list-item {
+        header {
+            h1, h2, h3, h4, h5, h6 {
+                display: inline;
+            }
+        }
+
+        ul {
+            display: flex;
+            list-style-type: none;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        li {
+            border-radius: 10px;
+            background-color: #e1ebf0;
+            padding-left: 0.25rem;
+            padding-right: 0.25rem;
+        }
+
+        li:not(:first-child) {
+            margin-left: 0.25rem;
+        }
+    }
+}
+
+.badges {
+    img {
+        display: inline;
+        margin-bottom: 0px;
+    }
+}
+
+.post {
+    main {
+        margin-top: 2rem;
+    }
+}
+
+.csv {
+    display: inline;
+    list-style: none;
+    padding: 0px;
+
+    li {
+        display: inline;
+
+        &:not(:last-child):after {
+            content: ", ";
+        }
+    }
+}
+
+.col2 ul {
+    column-count: 2;
+    list-style: none;
+}
+
+.col3 ul {
+    column-count: 3;
+    list-style: none;
+}
+
+.col4 ul {
+    column-count: 4;
+    list-style: none;
+}
+
+.col5 ul {
+    column-count: 5;
+    list-style: none;
+}
+
+.inline {
+    display: inline;
+}
+
+.round-fig img {
+    border-radius: 150px;
+}

@@ -1,0 +1,15 @@
+{{/*  https://simpleicons.org/  */}}
+<img
+    {{ if .Get 1 }}
+    height="{{ .Get 1 }}"
+    width="{{ .Get 1 }}"
+    {{ else }}
+    height="32"
+    width="32"
+    {{ end }}
+    {{ if .Get 2 }}
+    src="https://cdn.simpleicons.org/{{ .Get 0 }}/{{ .Get 2 }}"
+    {{ else }}
+    src="https://cdn.simpleicons.org/{{ .Get 0 }}"
+    {{ end }}
+/>

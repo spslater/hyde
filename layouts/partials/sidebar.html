@@ -1,5 +1,5 @@
 <aside class="sidebar">
-  <div class="container sidebar-sticky">
+  <div class="container {{ with .Site.Params.sticky }}sidebar-sticky{{ end }}">
     <div class="sidebar-about">
       <a href="{{ .Site.BaseURL }}"><h1>{{ .Site.Title }}</h1></a>
       <p class="lead">
@@ -7,15 +7,17 @@
       </p>
     </div>
 
+    {{ range $key, $value := .Site.Menus -}}
     <nav>
       <ul class="sidebar-nav">
-        <li><a href="{{ .Site.BaseURL }}">Home</a> </li>
-        {{ range .Site.Menus.main -}}
-          <li><a href="{{.URL}}"> {{ .Name }} </a></li>
-        {{- end }}
-      </ul>
-    </nav>
+          {{ range . -}}
+            <li>{{.Title}}<a href="{{.URL}}"> {{ .Name }} </a></li>
+          {{- end }}
+        </ul>
+      </nav>
+      <hr />
+    {{- end}}
 
-    <p>{{ with .Site.Params.copyright }}{{.}}{{ else }}&copy; {{ now.Format "2006"}}. All rights reserved. {{end}}</p>
+    <p>{{ with .Site.Params.copyright }}{{.}}{{ else }}&copy; {{ now.Format "2006"}}{{end}}</p>
   </div>
 </aside>

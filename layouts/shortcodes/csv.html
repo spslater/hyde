@@ -1,0 +1,3 @@
+{{- $list := .Inner | markdownify -}}
+{{- $list = replace $list "<ul>" `<ul class="csv">` -}}
+{{ $list | safeHTML }}

@@ -1,0 +1,4 @@
+{{- $list := .Inner | markdownify -}}
+{{- $num := (.Get 0) -}}
+{{- $list = replace $list "<ul>" `<ul class="col$num">` -}}
+{{ $list | safeHTML }}

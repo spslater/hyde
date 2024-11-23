@@ -1,9 +1,26 @@
 {{ define "main" -}}
-<ul class="posts">
+<article class="list-page">
 {{ range .Data.Pages -}}
-  <li>
-    <span><a href="{{ .Permalink }}">{{ .Title }}</a> <time class="pull-right post-list" datetime="{{ .Date.Format "2006-01-02T15:04:05Z0700" }}">{{ .Date.Format "Mon, Jan 2, 2006" }}</time></span>
-  </li>
+<article class="list-item">
+<header>
+  <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>{{ if .Params.subtitle }} <h4>{{ .Params.subtitle }}</h4>{{ end }}
+</header>
+<main>
+  {{ .Summary }}
+</main>
+<footer>
+  {{ partial "date.html" . }}
+  {{ if .Params.tags }}
+  <br />
+  <ul>
+    {{ range (.GetTerms "tags") }}
+    <li><a class="tag" href="{{ .RelPermalink }}">{{ lower .LinkTitle }}</a></li>
+    {{ end }}
+  </ul>
+  {{ end }}
+</footer>
+</article>
+<hr />
 {{- end }}
-</ul>
+</article>
 {{- end }}
